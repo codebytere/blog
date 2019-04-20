@@ -12,6 +12,7 @@ module.exports = {
       github: `https://github.com/codebytere`,
     },
   },
+  pathPrefix: "/blog",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -26,6 +27,14 @@ module.exports = {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+        options: {
+          google: {
+            families: ['Fredoka One', 'Sniglet']
+          }
+        }
     },
     {
       resolve: `gatsby-transformer-remark`,
