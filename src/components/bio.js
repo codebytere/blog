@@ -1,10 +1,3 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
@@ -33,17 +26,14 @@ function Bio() {
                 minWidth: 50,
                 borderRadius: `100%`,
               }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
+              imgStyle={{ borderRadius: `50%` }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+            Shelley is a software engineer
+            <a href={social.gtwitter}> @github </a>
+            & core eng <a href={social.etwitter}> @electronjs </a> and 
+            <a href={social.ntwitter}> @nodejs </a>. always learning. often caffeinated. 
+            sometimes <a href={social.ptwitter}> tweeting </a>. speaks about things in places sometimes! she/her 🌹🏳️‍🌈
             </p>
           </div>
         )
@@ -56,7 +46,7 @@ const bioQuery = graphql`
   query BioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 75, height: 75) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -65,7 +55,10 @@ const bioQuery = graphql`
       siteMetadata {
         author
         social {
-          twitter
+          ptwitter
+          gtwitter
+          etwitter
+          ntwitter
         }
       }
     }

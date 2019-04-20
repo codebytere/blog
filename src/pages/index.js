@@ -15,8 +15,8 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="All Posts"
+          keywords={[`blog`, `electronjs`, `electron`, `nodejs`, `node`, `codebytere`]}
         />
         <Bio />
         {posts.map(({ node }) => {
@@ -53,6 +53,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
