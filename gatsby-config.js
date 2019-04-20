@@ -32,7 +32,10 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
         options: {
           google: {
-            families: ['Fredoka One', 'Sniglet']
+            families: [
+              'Fredoka One',
+              'Titillium Web'
+            ]
           }
         }
     },
